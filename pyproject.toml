@@ -1,0 +1,38 @@
+[project]
+name = "ai-teacher"
+version = "0.1.0"
+description = ""
+authors = [
+  {name = "Hari-sys786", email = "harimanie@gmail.com"}
+]
+readme = "README.md"
+# only allow 3.11 or 3.12
+requires-python = ">=3.11,<3.13"
+
+dependencies = [
+  "fastapi (>=0.116.1,<0.117.0)",
+  "uvicorn[standard] (>=0.35.0,<0.36.0)",
+  "transformers (>=4.56.0,<5.0.0)",
+  "openrouter (>=1.0,<2.0)",
+  "langchain (>=0.3.27,<0.4.0)",
+  "pydantic (>=2.11.7,<3.0.0)",
+  "pyyaml (>=6.0.2,<7.0.0)",
+  "openai (>=1.102.0,<2.0.0)",
+  # now install vLLM safely
+  "vllm (>=0.10.1.1,<0.11.0.0)",
+  "huggingface-hub (>=0.34.4,<0.35.0)",
+  "accelerate (>=1.10.1,<2.0.0)",
+  "langchain-openai (>=0.3.25,<0.4.0)",
+  "langchain-google-genai (>=2.1.5,<3.0.0)",
+  "langchain-community (>=0.3.26,<0.4.0)",
+  "langgraph (>=0.4.9,<0.5.0)",
+  "langchain-huggingface (>=0.3.1,<0.4.0)",
+  "langchain-ollama (>=0.3.7,<0.4.0)"
+]
+
+[tool.poetry]
+packages = [{ include = "ai_teacher", from = "src" }]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
