@@ -19,7 +19,7 @@ dependencies = [
   "pyyaml (>=6.0.2,<7.0.0)",
   "openai (>=1.102.0,<2.0.0)",
   # now install vLLM safely
-  "vllm (>=0.10.1.1,<0.11.0.0)",
+  "vllm[cu121] (>=0.10.1.1,<0.11.0.0)",
   "huggingface-hub (>=0.34.4,<0.35.0)",
   "accelerate (>=1.10.1,<2.0.0)",
   "langchain-openai (>=0.3.25,<0.4.0)",
@@ -27,7 +27,9 @@ dependencies = [
   "langchain-community (>=0.3.26,<0.4.0)",
   "langgraph (>=0.4.9,<0.5.0)",
   "langchain-huggingface (>=0.3.1,<0.4.0)",
-  "langchain-ollama (>=0.3.7,<0.4.0)"
+  "langchain-ollama (>=0.3.7,<0.4.0)",
+  "bitsandbytes (>=0.47.0,<0.48.0)",
+  "numpy (==1.26.4)",
 ]
 
 [tool.poetry]
